@@ -100,7 +100,7 @@ export default function Home() {
           as="h1"
           size="3xl"
           textTransform="uppercase"
-          fontFamily="Barlow"
+          fontFamily="Fraunces"
           color="#fff"
           position="absolute"
           top="50%"
