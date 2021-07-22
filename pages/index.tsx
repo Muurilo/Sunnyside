@@ -56,7 +56,6 @@ export default function Home() {
           mt="8"
         >
           <Flex
-            display={isMenuOpen === true ? "flex" : "none"}
             flexDir="column"
             justifyContent="center"
             alignItems="center"
@@ -84,7 +83,7 @@ export default function Home() {
               <Text>Services</Text>
               <Text>Projects</Text>
               <Text
-                backgroundColor="hsl(51, 100%, 49%)"
+                backgroundColor="hsl(51, 90%, 49%)"
                 textTransform="uppercase"
                 fontWeight="bold"
                 color="gray.700"
