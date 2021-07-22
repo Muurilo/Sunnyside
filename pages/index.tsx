@@ -1,9 +1,22 @@
-import { Flex, Image, Box, Spacer, Heading, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  Flex,
+  Image,
+  Box,
+  Spacer,
+  Heading,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 
-import Logo from "../public/images/logo.svg";
-
 export default function Home() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setMenuOpen(!isMenuOpen);
+  }
+
   return (
     <Flex
       flexDir="column"
@@ -31,9 +44,58 @@ export default function Home() {
             alt=""
           />
           <Spacer />
-          <Box pt="10" mr="4">
+          <Box pt="10" mr="4" onClick={toggleMenu}>
             <FiMenu size="30" color="#fff" />
           </Box>
+        </Flex>
+        <Flex
+          display={isMenuOpen === true ? "flex" : "none"}
+          w="100%"
+          justifyContent="center"
+          alignItems="center"
+          mt="8"
+        >
+          <Flex
+            display={isMenuOpen === true ? "flex" : "none"}
+            flexDir="column"
+            justifyContent="center"
+            alignItems="center"
+            w="90vw"
+            h="70vh"
+            backgroundColor="#fff"
+            position="relative"
+            zIndex="10"
+          >
+            <Box
+              position="absolute"
+              right="0px"
+              top="-15px"
+              borderLeft="8px solid transparent"
+              borderRight="8px solid #fff"
+              borderTop="8px solid transparent"
+              borderBottom="8px solid #fff"
+            />
+            <VStack
+              spacing={5}
+              color="gray.700"
+              fontSize="2xl"
+            >
+              <Text>About</Text>
+              <Text>Services</Text>
+              <Text>Projects</Text>
+              <Text
+                backgroundColor="hsl(51, 100%, 49%)"
+                textTransform="uppercase"
+                fontWeight="bold"
+                color="gray.700"
+                py="5"
+                px="8"
+                borderRadius="full"
+              >
+                Contact
+              </Text>
+            </VStack>
+          </Flex>
         </Flex>
         <Heading
           as="h1"
