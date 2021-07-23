@@ -7,7 +7,7 @@ const Section2: React.FC = () => {
       <Flex flexDir="column" w="100vw" minH="100vh">
         <Box
           w="100vw"
-          h="70vh"
+          h="50vh"
           backgroundImage="url('/images/mobile/image-transform.jpg')"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
@@ -64,7 +64,7 @@ const Section2: React.FC = () => {
       <Flex flexDir="column" w="100vw" minH="100vh">
         <Box
           w="100vw"
-          h="70vh"
+          h="50vh"
           backgroundImage="url('/images/mobile/image-stand-out.jpg')"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
@@ -122,7 +122,7 @@ const Section2: React.FC = () => {
         <Flex
           flexDir="column"
           w="100vw"
-          h="115vh"
+          h="100vh"
           alignItems="center"
           justifyContent="flex-end"
           textAlign="center"
@@ -150,7 +150,7 @@ const Section2: React.FC = () => {
         <Flex
           flexDir="column"
           w="100vw"
-          h="115vh"
+          h="100vh"
           alignItems="center"
           justifyContent="flex-end"
           textAlign="center"
