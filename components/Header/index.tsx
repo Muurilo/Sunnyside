@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Flex, Image, Box, Spacer, Text, VStack } from "@chakra-ui/react";
+import {
+  Flex,
+  Image,
+  Box,
+  Spacer,
+  Text,
+  VStack,
+  HStack,
+} from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 
 const Header: React.FC = () => {
@@ -11,19 +19,41 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <Flex flexDir="row" w="100vw">
+      <Flex flexDir="row" w="100%">
         <Image
-          w="50%"
+          w={{ base: "50%", md: "md" }}
           pt="10"
-          pl="4"
-          h="auto"
+          pl={{ base: "4", md: "8" }}
           src={"/images/logo.svg"}
           alt=""
         />
         <Spacer />
-        <Box pt="10" mr="4" onClick={toggleMenu}>
+        <Box display={{ md: "none" }} pt="10" mr="4" onClick={toggleMenu}>
           <FiMenu size="30" color="#fff" />
         </Box>
+        <HStack
+          display={{ base: "none", md: "flex" }}
+          spacing={8}
+          color="white"
+          fontSize="xl"
+          pt={10}
+          pr={{ base: "4", md: "8" }}
+        >
+          <Text>About</Text>
+          <Text>Services</Text>
+          <Text>Projects</Text>
+          <Text
+            backgroundColor="#fff"
+            textTransform="uppercase"
+            fontWeight="bold"
+            color="gray.700"
+            py="5"
+            px="8"
+            borderRadius="full"
+          >
+            Contact
+          </Text>
+        </HStack>
       </Flex>
       <Flex
         display={isMenuOpen === true ? "flex" : "none"}
@@ -36,7 +66,7 @@ const Header: React.FC = () => {
           flexDir="column"
           justifyContent="center"
           alignItems="center"
-          w="90vw"
+          w="90%"
           h="70vh"
           backgroundColor="#fff"
           position="relative"
@@ -56,7 +86,7 @@ const Header: React.FC = () => {
             <Text>Services</Text>
             <Text>Projects</Text>
             <Text
-              backgroundColor="hsl(51, 90%, 49%)"
+              backgroundColor={{ base: "hsl(51, 90%, 49%)" }}
               textTransform="uppercase"
               fontWeight="bold"
               color="gray.700"

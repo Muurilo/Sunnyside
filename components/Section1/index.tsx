@@ -7,9 +7,12 @@ const Section1: React.FC = () => {
   return (
     <Flex
       flexDir="column"
-      w="100vw"
+      w="100%"
       h="100vh"
-      backgroundImage="url('/images/mobile/image-header.jpg')"
+      backgroundImage={{
+        base: "url('/images/mobile/image-header.jpg')",
+        md: "url('/images/desktop/image-header.jpg')",
+      }}
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
@@ -23,9 +26,12 @@ const Section1: React.FC = () => {
         color="#fff"
         position="absolute"
         top="50vh"
-        left="50vw"
+        left="50%"
         p={5}
-        transform="translate(-50%,-70%)"
+        transform={{
+          base: "translate(-50%,-70%)",
+          md: "translate(-50%,-150%)",
+        }}
         letterSpacing="wider"
       >
         We are creatives
@@ -33,9 +39,12 @@ const Section1: React.FC = () => {
       <Text
         position="absolute"
         top="50vh"
-        left="50vw"
-        transform="translate(-50%,-0%)"
-        fontSize="9xl"
+        left="50%"
+        transform={{
+          base: "translate(-50%,-0%)",
+          md: "translate(-50%,-40%)",
+        }}
+        fontSize={{base: "9xl", md: "12rem"}}
         color="#fff"
       >
         &darr;

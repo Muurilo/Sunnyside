@@ -2,21 +2,25 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 const Section2: React.FC = () => {
   return (
-    <Flex flexDir="column" w="100vw" minH="100vh">
+    <Flex flexDir="column" w="100%">
       {/* Item 1 */}
-      <Flex flexDir="column" w="100vw" minH="100vh">
+      <Flex flexDir={{ base: "column", md: "row-reverse" }} w="100%">
         <Box
-          w="100vw"
-          h="50vh"
-          backgroundImage="url('/images/mobile/image-transform.jpg')"
+          w={{ base: "100%", md: "50%" }}
+          h={{ base: "50vh", md: "60vh" }}
+          backgroundImage={{
+            base: "url('/images/mobile/image-transform.jpg')",
+            md: "url('/images/desktop/image-transform.jpg')",
+          }}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
         />
         <Flex
           flexDir="column"
-          w="100vw"
-          minH="50vh"
+          w={{ base: "100%", md: "50%" }}
+          minH="60vh"
+          h={{ md: "60vh" }}
           alignItems="center"
           justifyContent="center"
           p={5}
@@ -25,13 +29,17 @@ const Section2: React.FC = () => {
             as="h1"
             fontSize="4xl"
             m={10}
-            w="90vw"
+            w="90%"
             fontFamily="Fraunces"
             color="hsl(212, 27%, 19%)"
           >
             Transform your brand
           </Heading>
-          <Text fontSize="xl" w="80vw" color="gray.600">
+          <Text
+            fontSize={{ base: "xl", md: "2xl" }}
+            w={{ base: "80%", md: "40%" }}
+            color="gray.600"
+          >
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
@@ -43,7 +51,12 @@ const Section2: React.FC = () => {
             textAlign="center"
             m={10}
           >
-            <Text fontFamily="Fraunces" zIndex="5" textTransform="uppercase">
+            <Text
+              fontFamily="Fraunces"
+              zIndex="5"
+              fontSize={{ md: "xl" }}
+              textTransform="uppercase"
+            >
               Learn more
             </Text>
             <Box
@@ -61,19 +74,27 @@ const Section2: React.FC = () => {
       {/* Item 1 */}
 
       {/* Item 2 */}
-      <Flex flexDir="column" w="100vw" minH="100vh">
+      <Flex
+        flexDir={{ base: "column", md: "row" }}
+        w="100%"
+        minH={{ base: "100vh", md: "0" }}
+      >
         <Box
-          w="100vw"
-          h="50vh"
-          backgroundImage="url('/images/mobile/image-stand-out.jpg')"
+          w={{ base: "100%", md: "50%" }}
+          h={{ base: "50vh", md: "60vh" }}
+          backgroundImage={{
+            base: "url('/images/mobile/image-stand-out.jpg')",
+            md: "url('/images/desktop/image-stand-out.jpg')",
+          }}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
         />
         <Flex
           flexDir="column"
-          w="100vw"
+          w={{ base: "100%", md: "50%" }}
           minH="50vh"
+          h={{ md: "50h" }}
           alignItems="center"
           justifyContent="center"
           p={5}
@@ -82,13 +103,17 @@ const Section2: React.FC = () => {
             as="h1"
             fontSize="4xl"
             m={10}
-            w="90vw"
+            w="90%"
             fontFamily="Fraunces"
             color="hsl(212, 27%, 19%)"
           >
             Stand out to the right audience
           </Heading>
-          <Text fontSize="xl" w="80vw" color="gray.600">
+          <Text
+            fontSize={{ base: "xl", md: "2xl" }}
+            w={{ base: "80%", md: "40%" }}
+            color="gray.600"
+          >
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we´ll build and
             extend your brand in digital places.
@@ -100,7 +125,12 @@ const Section2: React.FC = () => {
             textAlign="center"
             m={10}
           >
-            <Text fontFamily="Fraunces" zIndex="5" textTransform="uppercase">
+            <Text
+              fontFamily="Fraunces"
+              zIndex="5"
+              fontSize={{ md: "xl" }}
+              textTransform="uppercase"
+            >
               Learn more
             </Text>
             <Box
@@ -118,15 +148,18 @@ const Section2: React.FC = () => {
       {/* Item 2 */}
 
       {/* Item 3 */}
-      <Flex flexDir="column" w="100vw" minH="100vh">
+      <Flex flexDir={{ base: "column", md: "row" }} w="100%">
         <Flex
           flexDir="column"
-          w="100vw"
-          h="100vh"
+          w={{ base: "100%", md: "50%" }}
+          h={{ base: "70vh", md: "60vh" }}
           alignItems="center"
           justifyContent="flex-end"
           textAlign="center"
-          backgroundImage="url('/images/mobile/image-graphic-design.jpg')"
+          backgroundImage={{
+            base: "url('/images/mobile/image-graphic-design.jpg')",
+            md: "url('/images/desktop/image-graphic-design.jpg')",
+          }}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
@@ -134,14 +167,19 @@ const Section2: React.FC = () => {
           <Heading
             as="h1"
             fontSize="4xl"
-            m={10}
-            w="90vw"
+            w="90%"
+            mb={{ md: 10 }}
             fontFamily="Fraunces"
             color="hsl(212, 27%, 19%)"
           >
             Graphic Design
           </Heading>
-          <Text fontSize="xl" w="80vw" pb={10} color="gray.600">
+          <Text
+            fontSize={{ base: "xl", md: "xl" }}
+            w={{ base: "80%", md: "70%" }}
+            pb={{ base: 10, md: 24 }}
+            color="gray.600"
+          >
             Great design makes you memorable. We deliver artwork that
             underscores your brand message and captures potential clients
             attention.
@@ -149,12 +187,15 @@ const Section2: React.FC = () => {
         </Flex>
         <Flex
           flexDir="column"
-          w="100vw"
-          h="100vh"
+          w={{ base: "100%", md: "50%" }}
+          h={{ base: "70vh", md: "60vh" }}
           alignItems="center"
           justifyContent="flex-end"
           textAlign="center"
-          backgroundImage="url('/images/mobile/image-photography.jpg')"
+          backgroundImage={{
+            base: "url('/images/mobile/image-photography.jpg')",
+            md: "url('/images/desktop/image-photography.jpg')",
+          }}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
@@ -162,14 +203,19 @@ const Section2: React.FC = () => {
           <Heading
             as="h1"
             fontSize="4xl"
-            m={10}
-            w="90vw"
+            w="90%"
+            mb={{ md: 10 }}
             fontFamily="Fraunces"
             color="hsl(212, 27%, 19%)"
           >
             Photography
           </Heading>
-          <Text fontSize="xl" w="80vw" pb={10} color="gray.600">
+          <Text
+            fontSize={{ base: "xl", md: "xl" }}
+            w={{ base: "80%", md: "70%" }}
+            pb={{ base: 10, md: 24 }}
+            color="gray.600"
+          >
             Increase your credibility by getting the most stunning, high-quality
             photos that improve your business image.
           </Text>

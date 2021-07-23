@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <Flex
       flexDir="column"
-      w="100vw"
-      minHeight="100vh"
+      w="100%"
+      justifyContent="flex-start"
       textAlign="center"
       alignItems="center"
     >
