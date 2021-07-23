@@ -4,7 +4,11 @@ const Section2: React.FC = () => {
   return (
     <Flex flexDir="column" w="100%">
       {/* Item 1 */}
-      <Flex flexDir={{ base: "column", md: "row-reverse" }} w="100%">
+      <Flex
+        textAlign={{ base: "center", md: "left" }}
+        flexDir={{ base: "column", md: "row-reverse" }}
+        w="100%"
+      >
         <Box
           w={{ base: "100%", md: "50%" }}
           h={{ base: "50vh", md: "60vh" }}
@@ -21,15 +25,15 @@ const Section2: React.FC = () => {
           w={{ base: "100%", md: "50%" }}
           minH="60vh"
           h={{ md: "60vh" }}
-          alignItems="center"
+          alignItems={{ base: "center", md: "flex-start" }}
           justifyContent="center"
-          p={5}
         >
           <Heading
             as="h1"
             fontSize="4xl"
-            m={10}
-            w="90%"
+            w="100%"
+            px={{ md: 14 }}
+            m={{ base: 10, md: 0 }}
             fontFamily="Fraunces"
             color="hsl(212, 27%, 19%)"
           >
@@ -37,7 +41,9 @@ const Section2: React.FC = () => {
           </Heading>
           <Text
             fontSize={{ base: "xl", md: "2xl" }}
-            w={{ base: "80%", md: "40%" }}
+            w={{ base: "80%", md: "100%" }}
+            px={{ md: 14 }}
+            py={5}
             color="gray.600"
           >
             We are a full-service creative agency specializing in helping brands
@@ -49,7 +55,8 @@ const Section2: React.FC = () => {
             alignItems="center"
             justifyContent="center"
             textAlign="center"
-            m={10}
+            mx={14}
+            my={10}
           >
             <Text
               fontFamily="Fraunces"
@@ -75,6 +82,7 @@ const Section2: React.FC = () => {
 
       {/* Item 2 */}
       <Flex
+        textAlign={{ base: "center", md: "left" }}
         flexDir={{ base: "column", md: "row" }}
         w="100%"
         minH={{ base: "100vh", md: "0" }}
@@ -95,15 +103,16 @@ const Section2: React.FC = () => {
           w={{ base: "100%", md: "50%" }}
           minH="50vh"
           h={{ md: "50h" }}
-          alignItems="center"
+          alignItems={{ base: "center", md: "flex-start" }}
           justifyContent="center"
           p={5}
         >
           <Heading
             as="h1"
             fontSize="4xl"
-            m={10}
-            w="90%"
+            w="100%"
+            px={{ md: 14 }}
+            m={{ base: 10, md: 0 }}
             fontFamily="Fraunces"
             color="hsl(212, 27%, 19%)"
           >
@@ -111,7 +120,9 @@ const Section2: React.FC = () => {
           </Heading>
           <Text
             fontSize={{ base: "xl", md: "2xl" }}
-            w={{ base: "80%", md: "40%" }}
+            w={{ base: "80%", md: "100%" }}
+            px={{ md: 14 }}
+            py={5}
             color="gray.600"
           >
             Using a collaborative formula of designers, researchers,
@@ -123,7 +134,8 @@ const Section2: React.FC = () => {
             alignItems="center"
             justifyContent="center"
             textAlign="center"
-            m={10}
+            mx={14}
+            my={10}
           >
             <Text
               fontFamily="Fraunces"
