@@ -21,7 +21,8 @@ const Header: React.FC = () => {
     <>
       <Flex flexDir="row" w="100%">
         <Image
-          w={{ base: "50%", md: "md" }}
+          w={{ base: "50%", md: "sm" }}
+          h="auto"
           pt="10"
           pl={{ base: "4", md: "8" }}
           src={"/images/logo.svg"}
